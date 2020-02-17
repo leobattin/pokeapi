@@ -1,0 +1,140 @@
+body {
+    background-color: #F5F5F5;
+    margin: 0px;
+    font-family: IBM Plex Sans;    
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Shadows Into Light';
+    font-size: 50px;
+}
+
+img.img_pokeball {
+    width: 5%;
+    display: flex;
+    margin: auto;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'IBM Plex Sans';
+}
+
+.card {
+    list-style: none;
+    margin: 20px;
+    padding: 40px;
+    background-color: #5901fd13;
+    color:#222;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card-popup {
+    list-style: none;
+    padding: 40px;
+    background-color: rgb(179, 211, 253);
+    color:#222;
+    text-align: center;
+}
+
+/* Style the close button (span) */
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+
+/* to do an animation:  */
+.card:hover {
+    animation: bounce 0.5s linear;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(-2px);
+    }
+    60% {
+        transform: translateY(0px);
+    }
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.card-subtitle{
+    font-weight: lighter;
+    color:#666;
+    margin-top:5px;
+}
+
+.card-image{
+    height:180px;
+}
+
+#pokedex {
+    padding-inline-start: 0;
+    display: grid;
+
+    /* I want each column be to 320px or 1fr wide.
+
+    auto-fit will generate as many column large as it can and based on the minimum of 320px,
+    and then just kind of divide into evenly accross the the one that we have.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    grid-gap: 0.1%; /* to have a gap between the cards */
+} 
+
+.container {
+    position: relative;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.popup {
+    position: absolute;
+    width: 50%;
+}
+
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    border-radius: 100%;
+    font-weight: 800;
+}
+
+#closeBtn:hover {
+    background-color: rgb(167, 167, 167);
+}
